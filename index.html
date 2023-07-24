@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <link rel="icon" href="https://media.discordapp.net/attachments/1110002620891938936/1132404049656959060/cbf0133cc445c903c83b35b1a151b1e0.png?width=120&height=120" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IzakDev</title>
+  <title>Click Counter</title>
   <style>
+    /* Basic styling for the button and counter text */
     body {
-      margin: 0;
-      padding: 0;
-      background-image: url('https://media.discordapp.net/attachments/1110002620891938936/1132404049656959060/cbf0133cc445c903c83b35b1a151b1e0.png?width=120&height=120');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh; /* This sets the body height to the full viewport height */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #counter {
+      margin-top: 20px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <body>
-  <audio id="background-music" autoplay loop>
-    <source src="https://raw.githubusercontent.com/cole1108/izakdev/master/music.mp3" type="audio/mpeg">
-    <!-- Add additional <source> elements with different audio formats for better browser compatibility -->
-  </audio>
-      <script src="script.js"></script>
+  <h1>Click the Button!</h1>
+  <button id="clickButton">Click me!</button>
+  <div id="counter">The button has been clicked 0 times.</div>
+
+  <script>
+    // JavaScript code to handle button click and update the counter
+    let clickCount = 0; // Initialize the click counter variable
+
+    const button = document.getElementById('clickButton');
+    const counter = document.getElementById('counter');
+
+    button.addEventListener('click', () => {
+      clickCount++; // Increase the click counter by 1
+      counter.textContent = `The button has been clicked ${clickCount} times.`; // Update the text with the new count
+    });
+  </script>
 </body>
 </html>
-
