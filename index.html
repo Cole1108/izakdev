@@ -8,7 +8,7 @@
   <!-- CSS for styling -->
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
       margin: 50px;
       color: black;
@@ -17,12 +17,6 @@
 
     h1 {
       color: #000000; /* Change color to your preference */
-    }
-
-    /* Centering container for the button */
-    .button-container {
-      display: flex;
-      justify-content: center;
     }
 
     /* Styling for the button */
@@ -41,6 +35,16 @@
     .discord-button:hover {
       background-color: #5a68a5;
     }
+
+    /* Custom font size for mobile devices */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+      .text-paragraph {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -51,7 +55,7 @@
   <!-- Centering container for the button -->
   <div class="button-container">
     <!-- Button that redirects to the Discord server -->
-    <a href="https://discord.gg/bgm" class="discord-button">Izak Studios</a>
+    <a href="https://discord.gg/bgm" class="discord-button">IzakDev Discord</a>
   </div>
 </body>
 </html>
